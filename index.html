@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	天气预报</title>
+	<link rel="stylesheet" href="css/index.css	">
+	<meta name=viewport content="width=device-width">
+	<script src="js/rem.js"></script>
+	<link rel="shortcut icon" href="img/logo.png">
+	<script src="js/jquery3.2.1.min.js"></script>
+	<script src="js/index.js"></script>
+
+</head>
+<body>
+
+	<header>
+		<div class="city-1">北京市 海淀区</div>
+		<div class="wuran">
+			<h2>空气</h2>
+			<h3>重度污染</h3>
+		</div>
+		<div class="temperature">10°</div>
+		<div class="condition">晴</div>
+		<div class="shidu">
+			<span>湿度</span>
+			<div>57%</div>
+		</div>
+		<h1 class="anhao">你若安好，便是晴天~
+		</h1>
+	</header>
+	<div class="box">
+		<div class="box1">
+			<div class="box1-left">
+				<div class="top">
+					<div class="today">今天</div>
+					<div class="today-wendu">
+						<span id="dat_high_temperature">17</span>
+						<span >/</span>
+						<span id="dat_low_temperature">3°</span>
+
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="tianqi" id="day_condition">晴转多云</div>
+					<div class="tianqi-tubiao">	</div>
+				</div>
+			</div>
+			<div class="box1-right">
+				<div class="top">
+					<div class="today">明天</div>
+					<div class="today-wendu">
+						<span id="tomorrow_high_temperature">17</span>
+						<span>/</span>
+						<span id="tomorrow_low_temperature">5°</span>
+
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="tianqi" id="tomorrow_condition">多云</div>
+					<div class="tianqi-tubiaojia">	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="hours">
+		<div class="swap">
+			<!-- <div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="c"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div>
+			<div class="now">
+				<h2 class="now-time">21:00</h2>
+				<div class="now-img"></div>
+				<h2 class="now-wendu">9°</h2>
+			</div> -->
+			
+		</div>
+	</section>
+	<section class="jinqi">
+		<div class="jinqi-1">
+			<!-- <div class="con">
+				<div class="con-1">
+					04/01
+				</div>
+				<div class="weaH">多云</div>
+				<div class="imgH"></div>
+				<div class="heaH">28°</div>
+			    <div class="heah">18°</div>
+			    <div class="imgh"></div>
+			    <div class="weah">阴</div>
+			    <div class="fengxiang">南风</div>
+			    <div class="dengji">三级</div>
+
+
+				
+			</div>
+			<div class="con">
+				<div class="con-1">
+					<span>03</span>
+					<span>/</span>
+					<span>21</span>
+				</div>
+				<div class="weaH">多云</div>
+				<div class="imgH"></div>
+				<div class="heaH">28°</div>
+			    <div class="heah">18°</div>
+			    <div class="imgh"></div>
+			    <div class="weah">阴</div>
+			    <div class="fengxiang">南风</div>
+			    <div class="dengji">三级</div>
+			</div>
+			<div class="con">
+				<div class="con-1">
+					<span>03</span>
+					<span>/</span>
+					<span>21</span>
+				</div>
+				<div class="weaH">多云</div>
+				<div class="imgH"></div>
+				<div class="heaH">28°</div>
+			    <div class="heah">18°</div>
+			    <div class="imgh"></div>
+			    <div class="weah">阴</div>
+			    <div class="fengxiang">南风</div>
+			    <div class="dengji">三级</div>
+			</div>
+			<div class="con">
+				<div class="con-1">
+					<span>03</span>
+					<span>/</span>
+					<span>21</span>
+				</div>
+				<div class="weaH">多云</div>
+				<div class="imgH"></div>
+				<div class="heaH">28°</div>
+			    <div class="heah">18°</div>
+			    <div class="imgh"></div>
+			    <div class="weah">阴</div>
+			    <div class="fengxiang">南风</div>
+			    <div class="dengji">三级</div>
+			</div>
+			<div class="con"><div class="con-1">
+					<span>03</span>
+					<span>/</span>
+					<span>21</span>
+				</div>
+				<div class="weaH">多云</div>
+				<div class="imgH"></div>
+				<div class="heaH">28°</div>
+			    <div class="heah">18°</div>
+			    <div class="imgh"></div>
+			    <div class="weah">阴</div>
+			    <div class="fengxiang">南风</div>
+			    <div class="dengji">三级</div></div>
+			<div class="con">
+				<div class="con-1">
+					<span>03</span>
+					<span>/</span>
+					<span>21</span>
+				</div>
+				<div class="weaH">多云</div>
+				<div class="imgH"></div>
+				<div class="heaH">28°</div>
+			    <div class="heah">18°</div>
+			    <div class="imgh"></div>
+			    <div class="weah">阴</div>
+			    <div class="fengxiang">南风</div>
+			    <div class="dengji">三级</div>
+			</div>
+			<div class="con">
+				<div class="con-1">
+					<span>03</span>
+					<span>/</span>
+					<span>21</span>
+				</div>
+				<div class="weaH">多云</div>
+				<div class="imgH"></div>
+				<div class="heaH">28°</div>
+			    <div class="heah">18°</div>
+			    <div class="imgh"></div>
+			    <div class="weah">阴</div>
+			    <div class="fengxiang">南风</div>
+			    <div class="dengji">三级</div>
+			</div>
+			<div class="con">
+				<div class="con-1">
+					<span>03</span>
+					<span>/</span>
+					<span>21</span>
+				</div>
+				<div class="weaH">多云</div>
+				<div class="imgH"></div>
+				<div class="heaH">28°</div>
+			    <div class="heah">18°</div>
+			    <div class="imgh"></div>
+			    <div class="weah">阴</div>
+			    <div class="fengxiang">南风</div>
+			    <div class="dengji">三级</div>
+			</div>
+		</div> -->
+	</section>
+	<!-- 注意事项开始 -->
+	<ul class="shixiang">
+		<li>
+		<div class="img1"></div>
+		<h1>3和8</h1>
+		<h2>尾号限行</h2>
+		</li>
+		<li>
+		<div class="img2"></div>
+		<h1>较冷</h1>
+		<h2>穿衣</h2>
+		</li>
+		<li>
+		<div class="img3"></div>
+		<h1>不带伞</h1>
+		<h2>雨伞</h2>
+		</li>
+		<li>
+		<div class="img4"></div>
+		<h1>较易发</h1>
+		<h2>感冒</h2>
+		</li>
+		<li>
+		<div class="img5"></div>
+		<h1>较适宜</h1>
+		<h2>洗车</h2>
+		</li>
+		<li>
+		<div class="img6"></div>
+		<h1>适宜</h1>
+		<h2>运动</h2>
+		</li>
+		<li>
+		<div class="img7"></div>
+		<h1>较弱</h1>
+		<h2>防晒</h2>
+		</li>
+		<li>
+		<div class="img8"></div>
+		<h1>适宜</h1>
+		<h2>钓鱼</h2>
+		</li>
+
+	</ul>
+	
+	<!-- 注意事项结束 -->
+
+
+	<!-- 城市开始 -->
+	<section class="city">
+		<div class="city-head">
+			<div class="city-kuang">
+				<div class="search">
+					<div class="sousuo">
+						</div>
+					<input type="text" placeholder="搜索地区/景点">
+				</div>
+				<div class="quxiao">取消 </div>
+			</div>
+
+		</div>
+		<!-- 热门城市开始 -->
+		<div class="city-renmen">
+		<h1 class="renmen">热门城市</h1>
+		
+		<ul class="renmencity">
+			<li class="bb">北京</li>
+			<li class="bb">上海</li>
+			<li class="bb">广州</li>
+			<li class="bb">深圳</li>
+			<li class="bb">郑州</li>
+			<li class="bb">西安</li>
+			<li class="bb">南京</li>
+			<li class="bb">杭州</li>
+			<li class="bb">武汉</li>
+			<li class="bb">成都</li>
+			<li class="bb">沈阳</li>
+			<li class="bb">天津</li>
+		</ul>
+		
+		</div>
+		
+		<div class="city-jingqu">
+		<!-- <div class="city-renmen"> -->
+		<h1 class="renmen">热门景区</h1>
+		<ul class="renmencity">
+			<li>故宫</li>
+			<li>颐和园</li>
+			<li>九寨沟</li>
+			<li>凤凰古城</li>
+			<li>秦始皇陵</li>
+			<li>龙门石窟</li>
+			<li>武陵源</li>
+			<li>华山</li>
+			<li>黄山</li>
+			
+		</ul>
+		</div>
+		</div>
+            
+	<!-- 热门城市结束 -->
+	</section>
+	<!-- 城市结束 -->
+	
+</body>
+</html>
